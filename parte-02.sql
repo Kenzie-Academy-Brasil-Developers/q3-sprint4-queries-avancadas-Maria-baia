@@ -13,12 +13,12 @@ VALUES ('Youtube'),
 ('Facebook'),
 ('TikTok');
 INSERT INTO usuario_redes_sociais(usuario_id, rede_social_id)
-VALUES (1, 1),
-(2, 1),
-(3, 1),
-(2, 2),
-(1, 2),
-(3, 3),
-(3, 4),
-(2, 3),
-(1, 5);
+VALUES ((SELECT id FROM usuarios WHERE nome LIKE 'Cauan'), (SELECT id FROM redes_sociais WHERE nome LIKE 'Youtube')),
+((SELECT id FROM usuarios WHERE nome LIKE 'Chrystian'), (SELECT id FROM redes_sociais WHERE nome LIKE 'Youtube')),
+((SELECT id FROM usuarios WHERE nome LIKE 'Matheus'), (SELECT id FROM redes_sociais WHERE nome LIKE 'Youtube')),
+((SELECT id FROM usuarios WHERE nome LIKE 'Chrystian'), (SELECT id FROM redes_sociais WHERE nome LIKE 'Twitter')),
+((SELECT id FROM usuarios WHERE nome LIKE 'Cauan'), (SELECT id FROM redes_sociais WHERE nome LIKE 'Twitter')),
+((SELECT id FROM usuarios WHERE nome LIKE 'Matheus'), (SELECT id FROM redes_sociais WHERE nome LIKE 'Instagram')),
+((SELECT id FROM usuarios WHERE nome LIKE 'Matheus'), (SELECT id FROM redes_sociais WHERE nome LIKE 'Facebook')),
+((SELECT id FROM usuarios WHERE nome LIKE 'Chrystian'), (SELECT id FROM redes_sociais  WHERE nome LIKE 'Instagram')),
+((SELECT id FROM usuarios WHERE nome LIKE 'Cauan'), (SELECT id FROM redes_sociais WHERE nome LIKE 'TikTok'));
